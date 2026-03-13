@@ -1,5 +1,5 @@
 # ============================================
-# FIX: Create corrected README.md
+# README.md
 # ============================================
 
 readme_content <- '# StatDeriveR
