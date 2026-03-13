@@ -1,0 +1,14 @@
+# Exports - Main user-facing functions
+export(derive_transform)
+export(derive_orderstat)
+export(simulate_check)
+
+# S3 methods - For printing and plotting
+S3method(print, statderive)
+S3method(plot, statderive)
+
+# Imports - Required packages
+import(stats)
+import(graphics)
+import(methods)
+

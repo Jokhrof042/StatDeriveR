@@ -1,0 +1,27 @@
+Package: StatDeriveR
+Title: Step-by-Step Derivation and Simulation Verification in Mathematical Statistics
+Version: 0.1.0
+Authors@R: c(
+  person("Your Name", "Here", email = "your.email@example.com", role = c("aut", "cre"))
+)
+Description: A personal R package for deriving core mathematical-statistics 
+    results (transformations of random variables, order statistics, sampling 
+    distributions) step by step and validating them through Monte Carlo 
+    simulation. Combines symbolic derivation with computational verification 
+    to connect mathematical theory with practical computation.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Language: en-US
+Depends: R (>= 4.0.0)
+Imports:
+  stats,
+  graphics,
+  methods
+Suggests:
+  testthat (>= 3.0.0),
+  knitr,
+  rmarkdown
+RoxygenNote: 7.3.1
+URL: https://github.com/Jokhrof042/StatDeriveR
+BugReports: https://github.com/Jokhrof042/StatDeriveR/issues
+
