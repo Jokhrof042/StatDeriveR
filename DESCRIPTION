@@ -4,11 +4,13 @@ Version: 0.1.0
 Authors@R: c(
   person("Your Name", "Here", email = "your.email@example.com", role = c("aut", "cre"))
 )
-Description: A personal R package for deriving core mathematical-statistics 
+Description: Enables step-by-step derivation of core mathematical-statistics 
     results (transformations of random variables, order statistics, sampling 
-    distributions) step by step and validating them through Monte Carlo 
-    simulation. Combines symbolic derivation with computational verification 
-    to connect mathematical theory with practical computation.
+    distributions) with Monte Carlo simulation verification to connect 
+    mathematical theory with practical computation.
+References:
+    Hogg RV, McKean JW, Craig AT (2019). "Introduction to Mathematical 
+    Statistics" (8th ed.). Pearson Education. <https://www.pearson.com>
 License: MIT + file LICENSE
 Encoding: UTF-8
 Language: en-US
