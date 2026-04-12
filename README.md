@@ -1,54 +1,67 @@
-readme_content <- '# StatDeriveR
+# StatDeriveR
 
-**StatDeriveR** is an R package for step-by-step derivation and simulation-based verification in mathematical statistics.
+<!-- badges: start -->
+<!-- Add CRAN / status badges here later -->
+<!-- badges: end -->
+
+**StatDeriveR** is an R package for **step-by-step derivation** and **simulation-based verification** in mathematical statistics.
+
+It is designed to help users move from theoretical results to computational understanding. Rather than only returning final answers, the package explains important derivations in a structured way and then checks them using Monte Carlo simulation.
+
+This makes the package useful for:
+
+- students learning mathematical statistics
+- instructors teaching derivations and distributions
+- researchers who want quick computational verification of theoretical results
+
+---
 
 ## Overview
 
-StatDeriveR is designed to connect mathematical statistics theory with computation. It takes probability and statistics problems, derives results step by step, and then validates them using Monte Carlo simulation.
+Mathematical statistics often requires deriving distributions, expectations, and related results by hand. These derivations are conceptually important, but they can also be difficult to follow and verify.
 
-Rather than only giving a final answer, **StatDeriveR**:
+**StatDeriveR** aims to bridge that gap by combining:
 
-- shows the derivation process step by step
-- presents key formulas clearly
-- verifies results through simulation
-- compares empirical and theoretical moments
-- visualizes theoretical and simulated results
+- **theoretical derivation**
+- **clear structured output**
+- **simulation-based checking**
+- **visual comparison of theory and empirical behavior**
 
-## Core Capabilities
+The package currently focuses on:
+
+- transformations of random variables
+- order statistics
+- simulation verification of derived results
+
+---
+
+## Main Features
 
 ### 1. Transformation of Random Variables
+Derive the distribution of a transformed variable \( Y = g(X) \) for supported distributions and transformations.
 
-Derive the distribution of \( Y = g(X) \) for monotone transformations.
+Examples of supported transformations include:
 
-#### Supported transformations
+- \( Y = X^2 \)
+- \( Y = \sqrt{X} \)
+- \( Y = 1/X \)
+- \( Y = \log(X) \)
+- \( Y = e^X \)
 
-- `Y = X^2`
-- `Y = sqrt(X)`
-- `Y = 1/X`
-- `Y = log(X)`
-- `Y = exp(X)`
+### 2. Order Statistics
+Obtain symbolic derivation of the density of the \(k\)-th order statistic from a sample of size \(n\).
 
-#### Available distributions
+### 3. Simulation Verification
+Compare theoretical results with Monte Carlo simulation to see whether the derived result behaves as expected in practice.
 
-The `dist` argument currently supports the following distributions:
+### 4. Print and Plot Methods
+Display derivation results clearly and visualize theoretical versus simulated behavior.
 
-- `"uniform"` with parameters `list(min = ..., max = ...)`
-- `"exponential"` with parameters `list(rate = ...)`
-- `"normal"` with parameters `list(mean = ..., sd = ...)`
-- `"gamma"` with parameters `list(shape = ..., rate = ...)`
-- `"beta"` with parameters `list(shape1 = ..., shape2 = ...)`
+---
 
-#### Example
+## Installation
+
+Install the released version from CRAN:
 
 ```r
-obj <- derive_transform(
-  dist = "uniform",
-  params = list(min = 0, max = 1),
-  transform = "x^2"
-)
-
-print(obj)
-
-obj <- simulate_check(obj, n_sim = 10000)
-
-plot(obj)
+install.packages("StatDeriveR")
